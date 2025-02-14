@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="veterinaryClinic" class="com.example.hsezoo.service.VeterinaryClinic">
+        <constructor-arg type="int" value="60"/>
+    </bean>
+
+    <bean id="zoo" class="com.example.hsezoo.service.Zoo">
+        <constructor-arg ref="veterinaryClinic"/>
+    </bean>
+
+    <bean id="controller" class="com.example.hsezoo.service.Controller">
+        <constructor-arg ref="zoo"/>
+        <constructor-arg type="int" value="100"/>
+    </bean>
+</beans>

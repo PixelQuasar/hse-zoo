@@ -1,4 +1,5 @@
 package com.example.hsezoo.interfaces;
 
-public class IAlive {
+public interface IAlive {
+    void eat(int foodAmount);
 }

@@ -1,17 +1,22 @@
 package com.example.hsezoo.model.animal;
 
-public class Rabbit extends Animal implements IHerbivore {
-    public Rabbit(String name) {
+public class Zebra extends Animal implements IHerbivore {
+    public Zebra(String name) {
         super(name);
     }
 
-    Rabbit() {
+    Zebra() {
         super();
     }
 
     @Override
+    public final void glaze() {
+        System.out.println("Zebra is glazing");
+    }
+
+    @Override
     public final String getSpecies() {
-        return "Rabbit";
+        return "Zebra";
     }
 
     @Override
@@ -22,14 +27,9 @@ public class Rabbit extends Animal implements IHerbivore {
     @Override
     public final void eat(int foodAmount) {
         if (foodAmount < getNeededFoodAmount()) {
-            System.out.println("Rabbit is hungry");
+            System.out.println("Zebra is hungry");
         } else {
-            System.out.println("Rabbit is peacefully chewing grass");
+            System.out.println("Zebra is peacefully nibbles grass");
         }
-    }
-
-    @Override
-    public void glaze() {
-        System.out.println("Rabbit is glazing");
     }
 }
