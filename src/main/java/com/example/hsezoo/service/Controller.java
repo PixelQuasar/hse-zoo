@@ -25,7 +25,7 @@ public class Controller {
     boolean active;
     final Scanner scanner;
 
-    Controller(Zoo zoo, int rowLength) {
+    public Controller(Zoo zoo, int rowLength) {
         this.zoo = zoo;
         this.rowLength = rowLength;
         active = false;
